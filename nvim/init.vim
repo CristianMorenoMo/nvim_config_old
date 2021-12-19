@@ -28,29 +28,26 @@ Plug 'tpope/vim-eunuch'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+" Dart & Flutter
+Plug 'dart-lang/dart-vim-plugin'
+" Go lang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
-
-set encoding=utf-8
-set number 
-set relativenumber
-syntax enable
-" set noswapfile
-set scrolloff=7
-set backspace=indent,eol,start
-
-set mouse=a
-set clipboard=unnamed  "Comparte clipboard con OS
-set numberwidth=1
-set showcmd
-set showmatch
-
-let mapleader = ' '
 
 let loaded_netrwPlugin=1
 filetype plugin on
 
+set number
+set relativenumber
+set numberwidth=1
 
+
+let mapleader = " "
+set showcmd
+set showmatch
+
+set clipboard=unnamed  "Comparte clipboard con OS
 
 " Configuración de indentación
 set smarttab
