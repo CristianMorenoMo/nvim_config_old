@@ -11,7 +11,7 @@ set sw=2
 set relativenumber
 set laststatus=2
 set noshowmode
-
+set updatetime=300
 
 call plug#begin('~/.vim/plugged')
 "Theme
@@ -25,10 +25,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'yggdroot/indentline'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-surround'
-  Plug 'sirver/ultisnips'
-
-
-	
+  Plug 'sirver/ultisnips'	
   "typing
   Plug 'jiangmiao/auto-pairs'
 call plug#end()
@@ -36,8 +33,6 @@ call plug#end()
 colorscheme gruvbox
 "let g:gruvox_contrast_dark = "hard"
 highlight Normal ctermbg=NONE
-
-let NERDTreeQuitOnOpen=1
 
 "tecla lider
 let mapleader=" "
@@ -50,7 +45,13 @@ nmap <Leader>q :q<CR>
 
 nnoremap <Leader>< 10<C-w><
 nnoremap <Leader>> 10<C-W>>
-let g:jedi#auto_initialization = 0
+
+
+let NERDTreeQuitOnOpen=1
+
+let g:coc_global_extensions = [
+      \ 'coc-pyright', 'coc-json', 'coc-word'
+      \ ]
 
 source $HOME/.config/nvim/plug-config/coc.vim
 
